@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panggau Libau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #004466;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 150px;
+      display: block;
+      margin: 20px auto;
+    }
+    #map {
+      height: 500px;
+      margin-top: 20px;
+    }
+    .team {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .member {
+      text-align: center;
+      margin: 20px;
+    }
+    .member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Panggau Libau</h1>
+    <h3>Heavenly Abode</h3>
+  </header>
+
+  <!-- About Group -->
+  <section id="group">
+    <h2>About Our Group</h2>
+    <p>We are a group of Environmental Technologist from Faculty of Engineering (FE) and Faculty of Resource Science & Technology (FRST) from University Malaysia Sarawak (UNIMAS) in Sarawak, Malaysia. Our group name 'Panggau Libau' is a folklore depicting a spiritual domain, a mystical place in between the mortal world and the sky. </p>
+    <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/group%20logo.png?raw=true"
+     alt="Group Logo"
+     class="logo"
+     style="width:250px;">
+  </section>
+
+  <!-- About Project -->
+  <section id="project">
+    <h2>About TerraShield</h2>
+    <p>Landslides, a frequent and devastating natural disaster in Malaysia, claim lives and cause millions in damages during monsoon seasons. Exacerbated by climate change, these events threaten both urban and rural communities, including remote tribal areas. To address this, TerraShield uses Machine Learning (ML) to predict landslide risks in Western Sarawak. By analyzing diverse datasets from NASA and other sources, we identified key variables driving landslides and developed a highly accurate ML model. This model powers a Landslide Susceptibility Map (LSM), visualized as an interactive 3D model to pinpoint vulnerable locations. With 99% accuracy in testing, TerraShield equips policymakers with a reliable tool to prioritize early prevention and mitigation, safeguarding communities and reducing economic losses.</p>
+    <p> Our model was developed using R "neuralnet" package with data from NASA (ALOS PALSAR DEM, Global Landslide Catalogue), ESRI (Land Use and Land Cover), FAO Soil Map, CHIRPS Pentad: Climate Hazards Center InfraRed Precipitation With Station Data (Version 2.0 Final), and EU soil map of Sarawak.  </p>
+    <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/project%20logo.png?raw=true" 
+        alt="Project Logo" 
+        class="logo"
+     style="width:250px;">
+    <h3>Project Metrics</h3>
+    <p> Our model was evaluated through Area Under the Curve (AUC) where it evaluated to have an AUC of 0.99</p>
+    <div style="text-align:center;">
+    <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/Metrics.png?raw=true" 
+        alt="Project Metrics" 
+        style="width:500px;">
+</div>
+
+  </section>
+
+  <!-- Our Project -->
+  <section id="map-section">
+    <h2>Our Project Maps</h2>
+    <p>To go to the 3D version of the map, click on this button:</p>
+
+    <!-- Button -->
+    <a href="https://starchystone.github.io/Panggau-Libau/" target="_blank" class="map-button">
+      🌍 View 3D Map
+    </a>
+
+    <div id="map"></div>
+
+    <!-- Button styling -->
+    <style>
+      .map-button {
+        display: inline-block;
+        margin: 15px 0 25px 0;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, #0078d7, #005a9e);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 40px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+      }
+
+      .map-button:hover {
+        background: linear-gradient(135deg, #1a90ff, #004a80);
+        transform: translateY(-3px);
+        box-shadow: 0px 6px 12px rgba(0,0,0,0.4);
+      }
+
+      .map-button:active {
+        transform: translateY(-1px);
+      }
+    </style>
+
+  
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="team">
+      <div class="member">
+        <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/nur%20hisyam.png?raw=true" alt="Member 1">
+        <h3>Nur Hisyam Ramli</h3>
+        <p>Project Leader</p>
+        <p>hisyamhistamine@gmail.com</p>
+      </div>
+      <div class="member">
+        <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/Irdina.png?raw=true" alt="Member 2">
+        <h3>Irdina Zulaika Muhamad Hisyam</h3>
+        <p>GIS Specialist</p>
+        <p>irdinazulaika01@gmail.com</p>
+      </div>
+      <div class="member">
+        <img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/usun.png?raw=true" alt="Member 3">
+        <h3>Grace Usun Joel</h3>
+        <p>Data Analyst</p>
+        <p>graceusun58@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- KML Plugin -->
+  <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+  <!-- Add Leaflet-Geotiff plugin -->
+  <script src="https://unpkg.com/leaflet-geotiff/dist/leaflet-geotiff.min.js"></script>
+  <script src="https://unpkg.com/leaflet-geotiff/dist/leaflet-geotiff-plotty.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+<script>
+    // Initialize map
+    var map = L.map('map').setView([1.4701817941519995, 110.42549110485335], 10); // Adjust to your study area
+
+    // Base layer
+    var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var susceptibility = L.tileLayer(
+      'https://raw.githubusercontent.com/starchystone/Panggau-Libau-XYZ/main/XYZ/{z}/{x}/{y}.png',
+      {
+        minZoom: 10,   // your tiles start at zoom 10
+        maxZoom: 13,   // set according to your tiles
+        attribution: "Landslide Susceptibility (Panggau Libau)"
+      }
+    ).addTo(map);
+
+    // --- GeoJSON layers from GitHub ---
+    var rivers = L.geoJSON(null, {
+      style: { color: "blue", weight: 2 }
+    });
+
+    var builtAreas = L.geoJSON(null, {
+      style: { color: "red", weight: 1, fillOpacity: 0.5 }
+    });
+
+    var crops = L.geoJSON(null, {
+      style: { color: "green", weight: 1, fillOpacity: 0.5 }
+    });
+
+    // Load GeoJSON files from GitHub raw
+    fetch("https://raw.githubusercontent.com/starchystone/Panggau-Libau-Media/d22fe5e893e88cb303acf478dde9a2025d48cb2f/Rivers.geojson")
+      .then(res => res.json())
+      .then(data => rivers.addData(data));
+
+    fetch("https://raw.githubusercontent.com/starchystone/Panggau-Libau-Media/main/Built%20Areas.geojson")
+      .then(res => res.json())
+      .then(data => builtAreas.addData(data));
+
+    fetch("https://raw.githubusercontent.com/starchystone/Panggau-Libau-Media/d22fe5e893e88cb303acf478dde9a2025d48cb2f/Crops.geojson")
+      .then(res => res.json())
+      .then(data => crops.addData(data));
+
+    // --- Layer control ---
+    var overlayMaps = {
+      "Landslide Susceptibility": susceptibility,
+      "Rivers": rivers,
+      "Built Areas": builtAreas,
+      "Crops": crops
+    };
+
+    L.control.layers(null, overlayMaps).addTo(map);
+    // --- Add photo/logo at bottom left ---
+    var photoControl = L.control({ position: 'bottomleft' });
+
+    photoControl.onAdd = function(map) {
+        var div = L.DomUtil.create('div', 'photo-control');
+        div.innerHTML = '<img src="https://github.com/starchystone/Panggau-Libau-Media/blob/main/Legend.png?raw=true" alt="Logo" style="width:100px;">'; 
+        return div;
+    };
+
+    photoControl.addTo(map);
+    // Add search box (geocoder)
+    L.Control.geocoder({
+        defaultMarkGeocode: true, // automatically marks the location on map
+        placeholder: 'Search area...' // placeholder text
+    }).addTo(map);
+
+</script>
+
+
+</body>
+</html>
